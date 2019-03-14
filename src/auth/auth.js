@@ -1,8 +1,8 @@
-import { auth, usersRef } from '../firebase.js';
 import { loadHeader } from '../shared/header-component.js';
+import { auth, usersRef } from '../firebase.js';
 
-
-loadHeader();
+const options = { skipAuth: true };
+loadHeader(options);
 
 const ui = new firebaseui.auth.AuthUI(auth);
 
@@ -13,9 +13,9 @@ ui.start('#firebaseui-auth-container', {
         // firebase.auth.FacebookAuthProvider.PROVIDER_ID
     ],
     signInSuccessUrl: './',
-    credentialHelper: firebase.auth.CredentialHelper.NONE,
+    credentialHelper: firebaseui.auth.CredentialHelper.NONE,
     callbacks: {
-        signInSuccesfulWithAuthResult(authResult) {
+        signInSuccessWithAuthResult(authResult) {
             const user = authResult.user;
             usersRef.child(user.uid)
                 .set({

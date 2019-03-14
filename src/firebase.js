@@ -2,7 +2,7 @@ const config = {
     apiKey: 'AIzaSyAzJvBvodk0TUwME9FT9AVam6lNJYhqRtc',
     authDomain: 'streamify-2104d.firebaseapp.com',
     databaseURL: 'https://streamify-2104d.firebaseio.com',
-    projectId: 'streamify-2104d'
+    projectId: 'streamify-2104d',
 };
 
 firebase.initializeApp(config);
