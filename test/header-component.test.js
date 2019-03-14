@@ -15,3 +15,37 @@ test('making the header', assert => {
     assert.htmlEqual(result, expected);
 });
 
+function makeProfile(user) {
+    const html = /*html*/ `
+    <div class="profile">
+    <img src="http://www.nacdnet.org/wp-content/uploads/2016/06/person-placeholder.jpg">
+    <span>Dave Cornelius</span>
+    <button>Sign Out</button>
+    </div>
+    `;
+
+    const template = document.createElement('template');
+    template.innerHTML = html;
+    return template.content;r
+}
+
+test('make user profile', assert => {
+    const user = {
+        displayName: 'Dave Cornelius',
+        photoURL: 'http://www.nacdnet.org/wp-content/uploads/2016/06/person-placeholder.jpg'
+    };
+
+    const expected = /*html*/ `
+    <div class="profile">
+    <img src="http://www.nacdnet.org/wp-content/uploads/2016/06/person-placeholder.jpg">
+    <span>Dave Cornelius</span>
+    <button>Sign Out</button>
+    </div>
+    `;
+
+    const dom = makeProfile(user);
+
+    assert.htmlEqual(dom, expected);
+
+});
+
