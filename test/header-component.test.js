@@ -7,7 +7,7 @@ test('making the header', assert => {
     
     const expected = /*html*/ `
     <header>
-    <img src="assets/streamifyLogo.png.png">
+    <img src="assets/moviefinder.png">
     <h1>Favorite Streams</h1>
 </header>
     `;

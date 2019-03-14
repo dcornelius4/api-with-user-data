@@ -3,7 +3,7 @@ import { auth } from '../firebase.js';
 export function makeHeader() {
     const html = /*html*/ `
     <header>
-    <img src="assets/streamifyLogo.png.png">
+    <img src="assets/moviefinder.png">
     <h1>Favorite Streams</h1>
 </header>
     `;
