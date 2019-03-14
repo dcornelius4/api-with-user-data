@@ -16,7 +16,7 @@ export function makeHeader() {
 }
 
 export function makeProfile(user) {
-    const avatar = user.profile || '../assets/placeholder-image.png';
+    const avatar = user.profile || '../../assets/placeholder-image.jpg';
     const html = /*html*/ `
     <div class="profile">
     <img src="${avatar}">
