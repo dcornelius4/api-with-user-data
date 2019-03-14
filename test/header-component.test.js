@@ -20,12 +20,12 @@ test('making the header', assert => {
 test('make user profile', assert => {
     const user = {
         displayName: 'Dave Cornelius',
-        photoURL: 'http://www.nacdnet.org/wp-content/uploads/2016/06/person-placeholder.jpg'
+        photoURL: '../assets/placeholder-image.png'
     };
 
     const expected = /*html*/ `
     <div class="profile">
-    <img src="http://www.nacdnet.org/wp-content/uploads/2016/06/person-placeholder.jpg">
+    <img src="../assets/placeholder-image.png">
     <span>Dave Cornelius</span>
     <button>Sign Out</button>
     </div>
