@@ -1,3 +1,4 @@
-import { makeHeader } from '../shared/header-component.js';
+import { loadHeader } from '../shared/header-component.js';
+// import { auth } from '../firebase.js';
 
-makeHeader();
+loadHeader();
